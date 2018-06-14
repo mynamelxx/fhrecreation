@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Strict//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link type="text/css" rel="styleSheet"  href="http://at.alicdn.com/t/font_476852_ub9iidon3y.css" />
+<link type="text/css" rel="styleSheet"  href="css/index.css" />
+<link href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/css/swiper.min.css" rel="stylesheet">
+<title>凤凰娱乐</title>
+</head>
+<body>
+	<div id="Home">
+		<div class="head">
+			<div class="thumb">
+				<img :src="logo" height="45px">
+			</div>
+			<div class="right">
+				<div class="userbtn" @click="login">
+					登录
+				</div>
+				<div class="userbtn">
+					{{username}}
+				</div>
+			</div>
+		</div>
+		<div class="swiper">
+			<swiper :options="swiperOption1" ref="mySwiper" class="myswiper1">
+				<swiper-slide v-for="(item,index) in swiperlist" :key="index">
+					<img :src="item" width="100%" >
+				</swiper-slide>
+				<div class="swiper-pagination" slot="pagination"></div>
+			</swiper>
+			<div class="marquee">
+				<div class="icon">
+					<i class="iconfont icon-gonggaolan"></i>
+				</div>
+				<div class="content">
+					<marquee scrollamount="3">
+						<span v-for="item,index in marqueelist" :key="index">
+							{{item}}
+						</span>
+					</marquee>
+				</div>
+			</div>
+		</div>
+		<div class="game">
+			<div class="horizontal">
+				<div class="roller">
+					<swiper :options="swiperOption2" ref="mySwiper" class="myswiper2">
+						<swiper-slide v-for="(item,index) in horizontallist" :key="index">
+							<span class="activetab" v-if="index==activetab">{{item}}</span>
+							<span @click="activetab=index" v-else>{{item}}</span>
+						</swiper-slide>
+					</swiper>
+				</div>
+				<div class="icon">
+					<i class="iconfont icon-icon20"></i>
+				</div>
+			</div>
+			<div class="gamelist">
+				<div class="list" v-for="item,index in gamelist" :key="index" @click="seedetail(item)">
+					<div class="icon">
+						<img :src="item.icon">
+					</div>
+					<div class="name">
+						{{item.name}}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-awesome-swiper@3.1.2/dist/vue-awesome-swiper.js"></script>
+<script src="js/index.js"></script>
+<script>
+Vue.use(window.VueAwesomeSwiper)
+</script>
+</html>

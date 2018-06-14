@@ -1,0 +1,115 @@
+@CHARSET "UTF-8";
+html body{
+	margin:0px;
+}
+#Login .head{
+	background: #f8f8f8;
+	text-align:center;
+	line-height: 55px;
+	height:55px;
+	border-bottom: 1px solid #c3c6cd;
+	box-sizing: border-box;
+}
+#Login .head .icon{
+	display: inline-block;
+	position: absolute;
+	left:5px;
+	padding:0 12px;
+	font-weight: 900;
+	color:#ef6b73;			
+}
+#Login .head .icon i{
+	font-size:1.1rem;
+}
+#Login .head .icon .text{
+	display: inline-block;
+	color:#000;
+	font-weight: 600;
+	font-size:1.25rem;
+}
+#Login .login{
+	background: #eceff2;
+	position: absolute;
+	top:55px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+}
+#Login .login .userinfo{
+	margin:30px 10px 0px;
+	background: #fff;
+	border-radius: 10px;
+	border: 1px solid #ddd;
+}
+#Login .login .userinfo .input{
+	padding:12px 10px;
+	line-height: 30px;
+	font-size:0px;
+}
+#Login .login .userinfo .input .key{
+	display: inline-block;
+	width:20%;
+}
+#Login .login .userinfo .input .key .text{
+	display: inline-block;
+	font-size: 0.85rem;
+}
+#Login .login .userinfo .input .key i{
+	font-size:1.3rem;
+	position: relative;
+	top:2px;
+}
+#Login .login .userinfo .input .value{
+	width:80%;
+	display: inline-block;
+}
+#Login .login .userinfo .input .value input{
+	outline: none;
+	border:none;
+	font-size:1.2rem;
+	color:#7c838c;
+	font-weight: 700;
+	width:100%;
+}
+#Login .login .check{
+	margin: 0 15px;
+	padding:12px 0;
+}
+#Login .login .check .text{
+	vertical-align: top;
+	display: inline-block;
+	font-size:1rem;
+	color:#32a1ff;
+}
+#Login .login .check .remember{
+	height:20px;
+	width:20px;
+}
+#Login .login .check .remember:before{
+	border:1px solid;
+	border-color: rgba(0,0,0,.35);
+	background: rgba(0,0,0,.1);
+	border-radius: 2px;
+}
+#Login .login .confirm{
+	background: #32a1ff;
+	color:#fff;
+	opacity:.4;
+	line-height: 40px;
+	width:95%;
+	margin:0 auto;
+	text-align:center;
+	border-radius:4px;
+	font-size:1rem;
+}
+#Login .login .specialbtn{
+	font-size:0px;
+	margin-top:30px;
+}
+#Login .login .specialbtn .btn{
+	width:33.3%;
+	text-align:center;
+	display: inline-block;
+	font-size:1rem;
+	color:#32a1ff;
+}

@@ -1,0 +1,439 @@
+@CHARSET "UTF-8";
+#Game{
+	background:#fff;
+}
+#Game .up{
+	position: relative;
+	z-index: 10;
+	background:#fff;
+}
+#Game .up .head{
+	z-index:2;
+	height:43px;
+	color:#fff;
+	font-size:1.1rem;
+	padding-left:10px;
+	overflow: hidden;
+}
+#Game .up .head .title{
+	line-height: 43px;
+	display: inline-block;
+}
+#Game .up .head .title i{
+	font-size:0.9rem;
+}
+#Game .up .head .right{
+	line-height: 43px;
+	float:right;
+	display: inline-block;
+}
+#Game .up .head .right i{
+	padding-left:15px;
+	padding-right: 10px;
+	font-size:1.2rem;
+}
+#Game .leftdrawer .head{
+	height:43px;
+	color:#fff;
+	padding:10px;
+}
+#Game .leftdrawer .head .icon{
+	position: relative;
+	bottom:5px;
+	padding-left:15px;
+	display: inline-block;
+}
+#Game .leftdrawer .head .icon i{
+	font-size:1.3rem;
+}
+#Game .leftdrawer .head .text{
+	font-size:1rem;
+	display: inline-block;
+	position: relative;
+	bottom:5px;
+}
+#Game .leftdrawer .gamelists .list{
+	height:43px;
+	line-height: 43px;
+	position: relative;
+	font-size:0px;
+}
+#Game .leftdrawer .gamelists .list .icon{
+	display: inline-block;
+	width:25%;
+	text-align:right;
+	padding-right: 5%;
+}
+#Game .leftdrawer .gamelists .list .icon i{
+	font-size:1rem;
+}
+#Game .leftdrawer .gamelists .list .name{
+	width:75%;
+	display: inline-block;
+	font-size:1rem;
+	color: #757575;
+	border-bottom: 0.026rem solid #f1f1f1;
+}
+#Game .leftdrawer .gamelists .list .back{
+	position: absolute;
+	right:10px;
+	display: inline-block;
+}
+#Game .rightdrawer .head{
+	color:#fff;
+	font-size:1rem;
+	padding:10px;
+}
+#Game .rightdrawer .head .icon{
+	display: inline-block;
+	line-height: 50px;
+	vertical-align:top;
+}
+#Game .rightdrawer .head .icon i{
+	font-size:2rem;
+}
+#Game .rightdrawer .head .value{
+	display: inline-block;
+}
+#Game .rightdrawer .head .value .text{
+	position: relative;
+	top:2px;
+}
+#Game .rightdrawer .head .value .num{
+	position: relative;
+	bottom:2px;
+	vertical-align: top;
+}
+#Game .rightdrawer .rightlist .list{
+	font-size:0px;
+	position: relative;
+	margin:10px 0;
+}
+#Game .rightdrawer .rightlist .list .icon{
+	text-align: center;
+	width:30%;
+	display: inline-block;
+}
+#Game .rightdrawer .rightlist .list .icon i{
+	color:#fff;
+	font-size:1.1rem;
+	padding:4px;
+	border-radius: 50px;
+}
+#Game .rightdrawer .rightlist .list .title{
+	font-size:0.9rem;
+	letter-spacing: 1px;
+	text-indent: 1px;
+	width:70%;
+	display: inline-block;
+	border-bottom: 1px solid #f1f1f1;
+	line-height: 30px;
+}
+#Game .rightdrawer .rightlist .list .back{
+	display: inline-block;
+	position: absolute;
+	right:10px;
+	top:2px;
+}
+#Game .rightdrawer .night{
+	position: absolute;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	padding:0 10px;
+	height:60px;
+	font-weight: 700;
+	color:rgba(0,0,0,.87);
+	font-size:1.1rem;
+	opacity: 0.6;
+	line-height: 60px;
+}
+#Game .rightdrawer .night .text{
+	padding-left:15px;
+	display: inline-block;
+}
+#Game .rightdrawer .night .switch{
+	padding-left:15px;
+	display: inline-block;
+}
+#Game .result{
+	z-index: 2;
+	background:#fff;
+	border-bottom: 0.026rem solid #f1f1f1;
+}
+#Game .result .line{
+	padding:8px 15px 0px;
+}
+#Game .result .line .line1{
+	font-size:0.8rem;
+}
+#Game .result .line .line1 .text{
+	display: inline-block;
+	text-indent:1px;
+	letter-spacing:1px;
+	width:25%;
+}
+#Game .result .line .line1 .result1{
+	display: inline-block;
+	position: relative;
+	bottom:5px;
+}
+#Game .result .line .line1 .result1 .value{
+	line-height: 22px;
+	font-size:0.85rem;
+	display: inline-block;
+	color:#fff;
+	border-radius: 50px;
+	width:22px;
+	height:22px;
+	text-align:center;
+	margin:0 2px;
+}
+#Game .result .line .line2 .openperiods{
+	width:25%;
+	display: inline-block;
+	vertical-align: top;
+	font-size:0.85rem;
+}
+#Game .result .line .line2 .result2{
+	display: inline-block;
+	position: relative;
+	bottom:5px;
+}
+#Game .result .line .line2 .result2 .value{
+	line-height: 22px;
+	font-size:0.8rem;
+	display: inline-block;
+	border-radius: 50px;
+	width:22px;
+	height:22px;
+	text-align:center;
+	margin:0 2px;
+}
+#Game .current{
+	border-bottom: 0.026rem solid #f1f1f1;
+	height:35px;
+	z-index:12;
+	padding-left:15px;
+	color: #757575;
+	padding-right: 15px;
+	font-size:0.8rem;
+	overflow: hidden;
+}
+#Game .current .periods{
+	line-height: 35px;
+	display: inline-block;
+}
+#Game .current .endtime{
+	display: inline-block;
+	line-height: 35px;
+	padding-left:15px;
+}
+#Game .current .endtime .time{
+	color:#e95553
+}
+#Game .current .opentime{
+	display: inline-block;
+	padding-left:15px;
+	line-height: 35px;
+}
+#Game .current .opentime .time{
+	color:#e95553
+}
+#Game .current .icon{
+	display: inline-block;
+	float:right;
+	vertical-align: top;
+	position: relative;
+	bottom:5px;
+}
+#Game .current .icon i{
+	font-size:1.8rem;
+}
+#Game .footerbar{
+	z-index: 22;
+	position: fixed;
+	bottom:0px;
+	height:60px;
+	padding:10px;
+	width: 100%;
+	background: #fff;
+	border-top:1px solid #f1f1f1;
+}
+#Game .footerbar .deleteicon{
+	font-size:0.9rem;
+	display: inline-block;
+	width:20%;
+	border-right:1px solid #dedbd4;
+}
+#Game .footerbar .deleteicon i{
+	font-size:1.2rem;
+	position: relative;
+	top:2px;
+}
+#Game .footerbar .betnum{
+	display: inline-block;
+	font-size:0.7rem;
+	width:20%;
+	letter-spacing: 3px;
+	text-indent: 3px;
+	text-align:center;
+}
+#Game .footerbar .betinput{
+	display: inline-block;
+	border: 1px solid rgba(255, 152, 0, 0.3);
+	width:30%;
+	height:35px;
+	font-size:1rem;
+}
+#Game .footerbar .betinput input{
+	margin-top: 0;
+	display: inline-block;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	text-indent: .10666667rem;
+	outline: none;
+	border-radius: 0;
+}
+#Game .footerbar .btn{
+	display: inline-block;
+	width:25%;
+	text-align:center;
+	color:#fff;
+	height:35px;
+	font-size:1rem;
+	vertical-align: top;
+	line-height:35px;
+}
+#Game .game .gray{
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: rgba(0,0,0,.2);
+	z-index:1;
+}
+#Game .game .lotterylist{
+	z-index:12;
+	position: relative;
+	font-size:0px;
+	border-bottom: 0.026rem solid #f1f1f1;
+	background:#fff;
+}
+#Game .game .lotterylist .left{
+	display: inline-block;
+	width:90%;
+	padding:0 10px;
+	height:38px;
+	overflow-y:hidden;
+	overflow-x:scroll;
+	white-space: nowrap;
+}
+#Game .game .lotterylist .left .list{
+	display: inline-block;
+	width:20%;
+	text-align:center;
+	font-size:1rem;
+	line-height: 30px;
+	padding-top: 4px;
+}
+#Game .game .lotterylist .left .list .activetab{
+	color:#fff;
+	border-radius: 50px;
+}
+#Game .game .lotterylist .left .list .notactive{
+	color:#757575;
+}
+#Game .game .lotterylist .right{
+	width:10%;
+	display: inline-block;
+	vertical-align: top;
+	line-height: 33px;
+	text-align:center;
+	color:#dedbd4;
+}
+#Game .game .lotterybtnlist{
+	background:#fff;
+	min-height:0px;
+}
+#Game .game .lotterybtnlist .btnlist{
+	position: absolute;
+	font-size:0px;
+	padding:5px 0;
+	width:100%;
+	background:#f8f8f8;
+	z-index:2;
+}
+#Game .game .lotterybtnlist .btnlist .btn{
+	display: inline-block;
+	width:25%;
+	font-size:1rem;
+	text-align:center;
+	margin:6px 0;
+	height:35px;
+	padding:0 2%;
+}
+#Game .game .lotterybtnlist .btnlist .btn .notactive{
+	border: 1px solid #dedbd4;
+	line-height: 35px;
+	border-radius: 6px;
+}
+#Game .game .lotterybtnlist .btnlist .btn .activetab{
+	border-radius: 6px;
+	line-height: 35px;
+}
+#Game .game .bets{
+	z-index:-2;
+	overflow: scroll;
+	position: absolute;
+	bottom:60px;
+	width:100%;
+	top:170px;
+}
+#Game .game .bets .list .title{
+	color: #757575;
+	background: #fafafa;
+	border-top: 0.026rem solid #f1f1f1;
+	border-bottom: 0.026rem solid #f1f1f1;
+	line-height: 18px;
+	padding:10px;
+	font-size:1rem;
+}
+#Game .game .bets .list .values{
+	font-size:0px;
+}
+#Game .game .bets .list .values .value{
+	font-size:0.8rem;
+	width:25%;
+	text-align:center;
+	background: #fff;
+	display: inline-block;
+	padding:10px 0;
+}
+#Game .game .bets .list .values .value .activebet .name{
+	font-size:0.7rem;
+	width:45px;
+	height:45px;
+	line-height: 45px;
+	border-radius: 50px;
+	border:1px solid #dedbd4;
+	margin:0 auto;
+	color:#fff;
+}
+#Game .game .bets .list .values .value .activebet .odds{
+	letter-spacing: 1px;
+}
+#Game .game .bets .list .values .value .notactivebet .name{
+	font-size:0.7rem;
+	width:45px;
+	height:45px;
+	line-height: 45px;
+	border-radius: 50px;
+	border:1px solid #dedbd4;
+	margin:0 auto;
+}
+#Game .game .bets .list .values .value .notactivebet .odds{
+	letter-spacing: 1px;
+}

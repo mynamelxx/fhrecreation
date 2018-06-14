@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Strict//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link type="text/css" rel="styleSheet"  href="http://at.alicdn.com/t/font_476852_ub9iidon3y.css" />
+<link type="text/css" rel="styleSheet"  href="css/game.css" />
+<link rel="stylesheet" href="https://unpkg.com/muse-ui/dist/muse-ui.css">
+<title>凤凰娱乐</title>
+</head>
+<body>
+	<div id="Game">
+		<div class="up">
+			<div class="head" :style="'background:'+themecolor">
+				<div class="title" @click="leftopen=true">
+					{{lottery.title}}
+					<i class="iconfont icon-40-copy"></i>
+				</div>
+				<div class="right">
+					{{lottery.balance}}
+					<i class="iconfont icon-liebiaoshitucaidan" @click="rightopen=true"></i>
+				</div>
+			</div>
+			<div class="result">
+				<div class="line">
+					<div class="line1">
+						<div class="text">开奖结果：</div>
+						<div class="result1">
+							<div class="value" v-for="item,index in lottery.result1" :key="index"
+							:style="'border: 0.0266rem solid '+themecolor+';background-color:'+themecolor">
+								{{item}}
+							</div>
+						</div>
+					</div>
+					<div class="line2">
+						<div class="openperiods" :style="'color:'+themecolor">{{lottery.oepnperiods}}期</div>
+						<div class="result2">
+							<div class="value" v-for="item,index in lottery.result2" :key="index"
+							:style="'color:'+themecolor+';border: 0.0266rem solid'+themecolor">
+								{{item}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="current">
+				<div class="periods">
+					{{lottery.periods}}期
+				</div>
+				<div class="endtime">
+					封盘：<span class="time">{{lottery.endtime}}</span>
+				</div>
+				<div class="opentime">
+					开奖：<span class="time">{{lottery.opentime}}</span>
+				</div>
+				<div class="icon" :style="'color:'+themecolor">
+					<i class="iconfont icon-live"></i>
+					<i class="iconfont icon-barchart"></i>
+				</div>
+			</div>
+		</div>
+			<div class="game">
+				<div class="gray" @click="showbtnlist=false" v-if="showbtnlist"></div>
+				<div class="lotterylist">
+					<div class="left">
+						<div class="list" v-for="item,index in lottery.lotterylist" :key="index">
+							<div class="activetab" key="activetab" v-if="item.id==activetab" :style="'background:'+themecolor">
+								{{item.name}}
+							</div>
+							<div class="notactive" key="notactive" v-else @click="activetab=item.id;activebet=[[],[],[],[],[],[],[],[],[],[]]">
+								{{item.name}}
+							</div>
+						</div>
+					</div>
+					<div class="right" @click="showbtnlist=!showbtnlist">
+						<i class="iconfont icon-xiala"></i>
+					</div>
+				</div>
+				<div class="lotterybtnlist" v-show="showbtnlist">
+					<div class="btnlist">
+						<div class="btn" v-for="item,index in lottery.lotterylist" :key="index">
+							<div class="activetab" key="activetab" v-if="item.id==activetab"
+							:style="'border: 1px solid'+ themecolor + ';'+'color:'+themecolor+';'">
+								{{item.name}}
+							</div>
+							<div class="notactive" key="notactive" v-else @click="activetab=item.id;showbtnlist=false;">
+								{{item.name}}
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="bets">
+					<div class="list" v-for="item,index in Betslist" :key="index">
+						<div class="title">
+							{{item.title}}
+						</div>
+						<div class="values">
+							<div class="value" v-for="it,ind in item.list" :key="ind">
+								<div class="activebet" key="activetab" v-if="activebet[index].indexOf(it.id)!=-1" 
+								@click="pushactive(it,ind,index)">
+									<div class="name" :style="'background:'+themecolor">
+										{{it.name}}
+									</div>
+									<div class="odds" :style="'color:'+themecolor">
+										{{it.odds}}
+									</div>
+								</div>
+								<div class="notactivebet" key="notactivebet" @click="pushactive(it,ind,index)" v-else>
+									<div class="name">
+										{{it.name}}
+									</div>
+									<div class="odds">
+										{{it.odds}}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		<div class="footerbar">
+			<div class="deleteicon">	
+				<i class="iconfont icon-shanchu"></i>
+				<span class="text">清除</span>
+			</div>
+			<div class="betnum">
+				共<span class="num" :style="'color:'+themecolor">{{betnum}}</span>注
+			</div>
+			<div class="betinput">
+				<input v-model="num" placeholder="请输入">
+			</div>
+			<div class="btn" :style="'background:'+themecolor">
+				下注
+			</div>
+		</div>
+		<mu-drawer :open.sync="leftopen" :docked="docked" width="50%" class="leftdrawer">
+			<div class="head" :style="'background:'+themecolor" @click="back">
+				<div class="icon">
+					<i class="iconfont icon-fanhui1"></i>
+				</div>
+				<div class="text">
+					返回大厅
+				</div>
+			</div>
+			<div class="gamelists">
+				<div class="list" v-for="item,index in gamelist" :key="index" @click="leftopen=false">
+					<div class="icon" :style="'color:'+themecolor">
+						<i :class="'iconfont '+item.icon"></i>
+					</div>
+					<div class="name">
+						{{item.name}}
+					</div>
+					<div class="back">
+						<i class="iconfont icon-40-copy"></i>
+					</div>
+				</div>
+			</div>
+		</mu-drawer>
+		<mu-drawer :open.sync="rightopen" :docked="docked" :right="true" width="50%" class="rightdrawer">
+			<div class="head" :style="'background:'+themecolor">
+				<div class="icon">
+					<i class="iconfont icon-dingdan"></i>
+				</div>
+				<div class="value">
+					<div class="text">即时注单</div>
+					<div class="num">{{immediate}}</div>
+				</div>
+			</div>
+			<div class="head" :style="'background:'+themecolor">
+				<div class="icon">
+					<i class="iconfont icon-qianbao"></i>
+				</div>
+				<div class="value">
+					<div class="text">今日输赢</div>
+					<div class="num">{{income}}</div>
+				</div>
+			</div>
+			<div class="rightlist">
+				<div class="list" v-for="item,index in rightlist" :key="index">
+					<div class="icon">
+						<i :class="'iconfont '+item.icon" :style="'background:'+item.color"></i>
+					</div>
+					<div class="title">
+						{{item.title}}
+					</div>
+					<div class="back">
+						<i class="iconfont icon-40-copy"></i>
+					</div>
+				</div>
+			</div>
+			<div class="night">
+				<div class="text">夜间模式</div>
+				<mu-switch v-model="night" class="switch" @change="changeswitch"></mu-switch>
+			</div>
+		</mu-drawer>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="https://unpkg.com/muse-ui/dist/muse-ui.js"></script>
+<script src="js/game.js"></script>
+</html>

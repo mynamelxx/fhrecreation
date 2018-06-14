@@ -1,0 +1,110 @@
+@CHARSET "UTF-8";
+html body{
+	margin:0px;
+}
+#Home .head{
+	background:rgba(2,0,1,.5);
+	height:55px;
+	line-height: 55px;
+}
+#Home .head .thumb{
+	padding:5px;
+	display: inline-block;
+}
+#Home .head .right{
+	float:right;
+	position: relative;
+	right:5px;
+	color:#fff;
+	display: inline-block;
+	font-size:1.1rem;
+	font-weight: 600;
+}
+#Home .head .right .userbtn{
+	display: inline-block;
+	padding-right: 10px;
+	text-decoration:underline;
+}
+#Home .swiper .myswiper{
+	font-size:0px;
+}
+#Home .swiper .myswiper .swiper-pagination{
+	text-align:right;
+}
+#Home .swiper .myswiper .swiper-pagination .swiper-pagination-bullet{
+	background:#fff;
+	width:12px;
+	height:12px;
+	opacity: 0.8;
+}
+#Home .swiper .myswiper .swiper-pagination .swiper-pagination-bullet-active{
+	background: #fff000;
+	opacity: 1;
+}
+#Home .swiper .marquee{
+	font-size:0px;
+	background: #f5f7f8;
+	color: #4d555f;
+	border-bottom: 1px solid #e6eaed;
+	height:35px;
+	line-height: 35px;
+}
+#Home .swiper .marquee .icon{
+	vertical-align: top;
+	text-align:center;
+	display: inline-block;
+	width: 10%;
+}
+#Home .swiper .marquee .icon i{
+	font-size:1.4rem;
+}
+#Home .swiper .marquee .content{
+	font-size:0.6rem;
+	display: inline-block;
+	width:90%;
+}
+#Home .game .horizontal{
+	font-size:0px;
+}
+#Home .game .horizontal .roller{
+	width:90%;
+	height:40px;
+	line-height: 40px;
+	overflow-x:scroll;
+	overflow-y: hidden;
+	display: inline-block;
+	white-space:nowrap;
+	font-size:1rem;
+	text-align: center;
+}
+#Home .game .horizontal .roller .activetab{
+	color:#f26971;
+}
+#Home .game .horizontal .icon{
+	text-align:center;
+	width:10%;
+	height:40px;
+	line-height: 40px;
+	display: inline-block;
+	vertical-align: top;
+}
+#Home .game .gamelist .list{
+	display: inline-block;
+	width:33.3333%;
+	font-size:0.88rem;
+	text-align:center;
+	padding: 7px 10px 6px;
+	border:1px solid #e6eaed;
+	box-sizing: border-box;
+}
+#Home .game .gamelist .list .icon img{
+	height:3rem;
+}
+#Home .game .gamelist .list .name{
+	font-weight: 700;
+	color:#666;
+	margin-bottom: 2px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}

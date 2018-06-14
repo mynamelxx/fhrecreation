@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Strict//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link type="text/css" rel="styleSheet"  href="http://at.alicdn.com/t/font_476852_ub9iidon3y.css" />
+<link type="text/css" rel="styleSheet"  href="css/login.css" />
+<title>凤凰娱乐</title>
+</head>
+<body>
+	<div id="Login">
+		<div class="head">
+			<div class="icon">
+				<i class="iconfont icon-40"></i>
+			</div>
+			<div class="text">
+				欢迎登录使用
+			</div>
+		</div>
+		<div class="login">
+			<div class="userinfo">
+				<div class="input" style="border-bottom:1px solid #ddd">
+					<div class="key">
+						<i class="iconfont icon-geren"></i>
+						<div class="text">帐号</div>
+					</div>
+					<div class="value">
+						<input type="text" v-model="user">
+					</div>
+				</div>
+				<div class="input">
+					<div class="key">
+						<i class="iconfont icon-icon-test"></i>
+						<div class="text">密码</div>
+					</div>
+					<div class="value">
+						<input type="text" v-model="psw">
+					</div>
+				</div>
+			</div>
+			<div class="check">
+				<label>
+					<input type="checkbox" v-model="remember" class="remember">
+					<div class="text">记住密码</div>
+				</label>
+			</div>
+			<div class="confirm" @click="confirm">
+				登录
+			</div>
+			<div class="specialbtn">
+				<div class="btn">
+					马上注册
+				</div>
+				<div class="btn">
+					忘记密码?
+				</div>
+				<div class="btn" @click="testplay">
+					试玩
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/login.js"></script>
+</html>
