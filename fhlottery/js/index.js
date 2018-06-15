@@ -59,7 +59,10 @@ var app=new Vue({
 			window.location.href="login.html"
 		},
 		seedetail(item){
-			window.location.href="game.html"
+			switch(item.name){
+				case '重庆时时彩': window.location.href="game.html";break;
+				case '北京赛车':window.location.href="game2.html";break;
+			}
 		}
 	}
 })

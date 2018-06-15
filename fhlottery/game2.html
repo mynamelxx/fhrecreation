@@ -4,7 +4,7 @@
 <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link type="text/css" rel="styleSheet"  href="http://at.alicdn.com/t/font_476852_ub9iidon3y.css" />
-<link type="text/css" rel="styleSheet"  href="css/game.css" />
+<link type="text/css" rel="styleSheet"  href="css/game2.css" />
 <link rel="stylesheet" href="https://unpkg.com/muse-ui/dist/muse-ui.css">
 <title>凤凰娱乐</title>
 </head>
@@ -27,7 +27,7 @@
 						<div class="text">开奖结果：</div>
 						<div class="result1">
 							<div class="value" v-for="item,index in lottery.result1" :key="index"
-							:style="'border: 0.0266rem solid '+themecolor+';background-color:'+themecolor">
+							:style="'background:#'+Math.floor(Math.random()*900000 + 100000).toString(10)">
 								{{item}}
 							</div>
 						</div>
@@ -35,8 +35,7 @@
 					<div class="line2">
 						<div class="openperiods" :style="'color:'+themecolor">{{lottery.oepnperiods}}期</div>
 						<div class="result2">
-							<div class="value" v-for="item,index in lottery.result2" :key="index"
-							:style="'color:'+themecolor+';border: 0.0266rem solid'+themecolor">
+							<div class="value" v-for="item,index in lottery.result2" :key="index">
 								{{item}}
 							</div>
 						</div>
@@ -218,5 +217,5 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
 <script src="https://unpkg.com/muse-ui/dist/muse-ui.js"></script>
-<script src="js/game.js"></script>
+<script src="js/game2.js"></script>
 </html>

@@ -183,7 +183,7 @@
 	font-size:0.85rem;
 	display: inline-block;
 	color:#fff;
-	border-radius: 50px;
+	border-radius: 3px;
 	width:22px;
 	height:22px;
 	text-align:center;
@@ -198,17 +198,18 @@
 #Game .result .line .line2 .result2{
 	display: inline-block;
 	position: relative;
-	bottom:5px;
+	bottom:3px;
 }
 #Game .result .line .line2 .result2 .value{
 	line-height: 22px;
 	font-size:0.8rem;
 	display: inline-block;
-	border-radius: 50px;
+	border-radius:3px;
 	width:22px;
 	height:22px;
 	text-align:center;
 	margin:0 2px;
+	border:1px solid #dedbd4;
 }
 #Game .current{
 	border-bottom: 0.026rem solid #f1f1f1;

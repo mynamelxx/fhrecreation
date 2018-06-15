@@ -24,7 +24,7 @@ var app=new Vue({
 		{id:'2',name:'北京赛车',icon:'icon-beijingsaiche',},
 	],
 	lottery:{
-		title:'重庆时时彩',
+		title:'北京赛车pk10',
 		balance:"0.10",
 		result1:['6','2','4','7','4'],
 		result2:['23','单','大','龙'],
@@ -71,14 +71,14 @@ var app=new Vue({
 	],
   },
   mounted(){
-	 var night=localStorage.getItem('night')
-	 if(night){
-		 this.night=true;
-		 document.body.style.filter="invert(100%)";
-	 }else{
-		 this.night=false;
-		 document.body.style.filter="none";
-	 }
+		var night=localStorage.getItem('night')
+		if(night){
+			this.night=true;
+			document.body.style.filter="invert(100%)";
+		}else{
+			this.night=false;
+			document.body.style.filter="none";
+		}
   },
   methods:{
 		back(){
