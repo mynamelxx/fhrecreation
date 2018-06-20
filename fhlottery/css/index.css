@@ -108,3 +108,22 @@ html body{
 	text-overflow: ellipsis;
 	white-space: nowrap;
 }
+#Home .tips{
+	position: absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	text-align:center;
+	color:#fff;
+	font-size:0.9375rem;
+}
+#Home .tips .text{
+	padding:20px;
+	background: rgba(0,0,0,.7);
+	border-radius: 6px;
+	display: inline-block;
+	vertical-align: baseline;
+	margin-top:80%;
+	text-overflow: ellipsis;
+}

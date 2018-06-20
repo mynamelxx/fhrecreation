@@ -94,7 +94,6 @@ html body{
 #Login .login .confirm{
 	background: #32a1ff;
 	color:#fff;
-	opacity:.4;
 	line-height: 40px;
 	width:95%;
 	margin:0 auto;
@@ -112,4 +111,23 @@ html body{
 	display: inline-block;
 	font-size:1rem;
 	color:#32a1ff;
+}
+#Login .tips{
+	position: absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	text-align:center;
+	color:#fff;
+	font-size:0.9375rem;
+}
+#Login .tips .text{
+	padding:20px;
+	background: rgba(0,0,0,.7);
+	border-radius: 6px;
+	display: inline-block;
+	vertical-align: baseline;
+	margin-top:80%;
+	text-overflow: ellipsis;
 }

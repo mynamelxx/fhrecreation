@@ -3,14 +3,31 @@ var app=new Vue({
 	data:{
 		user:'',
 		psw:'',
+		tipmessage:'账号密码错误',
+		showinfo:false,
 		remember:false,
+		btncolor:'opacity:.4',
+		btndisable:false,
 	},
 	methods:{
 		confirm(){
-	
+			if(this.btndisable){}
+			this.showinfo=true
+			setTimeout(()=>{
+				this.showinfo=false
+			},2000)
 		},
 		testplay(){
 			window.location.href="index.html"
+		},
+		inputchange(){
+			if(this.user && this.psw){
+				this.btncolor="opacity:1"
+				this.btndisable=true;
+			}else{
+				this.btncolor='opacity:.4'
+				this.btndisable=false;
+			}
 		}
 	}
 })

@@ -3,6 +3,8 @@ var app=new Vue({
 	data:{
 		logo:'https://img86.3000ms.com/MSiteOfficial/Logo/2016/07/07/101515879.png',
 		username:'试玩账号',
+		tipmessage:'123123',
+		showinfo:false,
 		swiperOption1: {
 			notNextTick: true,
 			loop:true,
