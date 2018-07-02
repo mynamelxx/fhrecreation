@@ -402,6 +402,11 @@
 	padding:10px;
 	font-size:1rem;
 }
+#Game .game .bets .line{
+	width:100%;
+	height:2px;
+	background: #f1f1f1;
+}
 #Game .game .bets .list .values{
 	font-size:0px;
 }
@@ -473,4 +478,46 @@
 }
 #Game .game .bets .list .values2 .value .notactivebet .odds{
 	letter-spacing: 1px;
+}
+#bets .mu-dialog{
+	border-radius: 6px;
+}
+#bets .mu-dialog-body{
+	padding:0px;
+}
+#bets .head{
+	line-height:40px;
+	text-align:center;
+	color:#fff;
+	font-size:1rem;
+}
+#bets .activebets .bet{
+	font-size: 0px;
+	padding:5px 8px;
+}
+#bets .activebets .bet .left{
+	width:50%;
+	display: inline-block;
+	font-size:0.8rem;
+}
+#bets .activebets .bet .right{
+	width:50%;
+	display: inline-block;
+	font-size:0.8rem;
+}
+#bets .footer{
+	width:90%;
+	margin:0 auto;
+	font-size:0px;
+	padding:5px 0;
+}
+#bets .footer .btns{
+	width:45%;
+	margin:0 auto;
+	font-size:0.9rem;
+	text-align:center;
+	margin:0 2.5%;
+	line-height:35px;
+	color:#fff;
+	display: inline-block;
 }

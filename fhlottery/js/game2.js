@@ -37,6 +37,10 @@ var app=new Vue({
 		{id:'6',name:'第五球'},{id:'7',name:'前中后'}],
 	},
 	activetab:'0',
+	betslist:[
+		{name:'冠亚和【大】',rate:'@2.2 X 1.00'},
+		{name:'冠军【大】',rate:'1.984 X 1.00'},
+	],
 	showbtnlist:false,
 	activebet:[[],[],[],[],[],[],[],[],[],[]],
 	Betslist:[
@@ -81,6 +85,9 @@ var app=new Vue({
 		}
   },
   methods:{
+  	bets(){
+  		this.openSimple=true;
+  	},
 		back(){
 			window.location.href="index.html"
 		},
@@ -107,5 +114,59 @@ var app=new Vue({
 				case '北京赛车':window.location.href="game2.html";break;
 			}
 		},
+		changeactivetab(item){
+			this.activetab=item.id
+			this.activebet=[[],[],[],[],[],[],[],[],[],[]]
+			if(this.Betslist.length==4){
+				this.Betslist=[
+					{shape:1,list:[
+					{name:'总和大',odds:'1.984',id:0,},
+					{name:'总和小',odds:'1.984',id:1,},
+					{name:'总和单',odds:'1.984',id:2,},
+					{name:'总和双',odds:'1.984',id:3,},]},
+					{shape:0,list:[
+					{name:'总和大',odds:'1.984',id:0,},
+					{name:'总和小',odds:'1.984',id:1,},
+					{name:'总和单',odds:'1.984',id:2,},
+					{name:'总和双',odds:'1.984',id:3,},]},
+					{shape:0,list:[
+					{name:'总和大',odds:'1.984',id:0,},
+					{name:'总和小',odds:'1.984',id:1,},
+					{name:'总和单',odds:'1.984',id:2,},
+					{name:'总和双',odds:'1.984',id:3,},]},
+				]
+			}else{
+				this.Betslist=[
+					{title:'总和、龙虎',
+					shape:1,
+					list:[
+					{name:'总和大',odds:'1.984',id:0,},
+					{name:'总和小',odds:'1.984',id:1,},
+					{name:'总和单',odds:'1.984',id:2,},
+					{name:'总和双',odds:'1.984',id:3,},]},
+					{title:'总和、龙虎',
+					shape:0,
+					list:[
+					{name:'总和大',odds:'1.984',id:0,},
+					{name:'总和小',odds:'1.984',id:1,},
+					{name:'总和单',odds:'1.984',id:2,},
+					{name:'总和双',odds:'1.984',id:3,},]},
+					{title:'总和、龙虎',
+					shape:1,
+					list:[
+					{name:'总和大',odds:'1.984',id:0,},
+					{name:'总和小',odds:'1.984',id:1,},
+					{name:'总和单',odds:'1.984',id:2,},
+					{name:'总和双',odds:'1.984',id:3,},]},
+					{title:'总和、龙虎',
+					shape:1,
+					list:[
+					{name:'总和大',odds:'1.984',id:0,},
+					{name:'总和小',odds:'1.984',id:1,},
+					{name:'总和单',odds:'1.984',id:2,},
+					{name:'总和双',odds:'1.984',id:3,},]},
+				]
+			}
+		}
   },
 })

@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link type="text/css" rel="styleSheet"  href="http://at.alicdn.com/t/font_476852_ub9iidon3y.css" />
+<link type="text/css" rel="styleSheet"  href="https://at.alicdn.com/t/font_476852_ub9iidon3y.css" />
 <link type="text/css" rel="styleSheet"  href="css/game2.css" />
 <link rel="stylesheet" href="https://unpkg.com/muse-ui/dist/muse-ui.css">
 <title>凤凰娱乐</title>
@@ -66,7 +66,7 @@
 							<div class="activetab" key="activetab" v-if="item.id==activetab" :style="'background:'+themecolor">
 								{{item.name}}
 							</div>
-							<div class="notactive" key="notactive" v-else @click="activetab=item.id;activebet=[[],[],[],[],[],[],[],[],[],[]]">
+							<div class="notactive" key="notactive" v-else @click="changeactivetab(item)">
 								{{item.name}}
 							</div>
 						</div>
@@ -134,6 +134,8 @@
 									</div>
 								</div>
 							</div>
+						</div>
+						<div class="line" v-if="index!=1 && !item.title">
 						</div>
 					</div>
 				</div>
@@ -213,6 +215,29 @@
 				<mu-switch v-model="night" class="switch" @change="changeswitch"></mu-switch>
 			</div>
 		</mu-drawer>
+		<mu-dialog width="90%" :open.sync="openSimple" id="bets">
+			<div class="head" :style="'background:'+themecolor">
+				下注清单
+			</div>
+			<div class="activebets">
+				<div class="bet" v-for="item,index in betslist" :key="index">
+					<div class="left">
+						{{item.name}}
+					</div>
+					<div class="right">
+						{{item.rate}}
+					</div>
+				</div>
+			</div>
+			<div class="footer">
+				<div class="btns" :style="'background:'+themecolor">
+					取消
+				</div>
+				<div class="btns" :style="'background:'+themecolor">
+					确定
+				</div>
+			</div>
+		</mu-dialog>
 	</div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
