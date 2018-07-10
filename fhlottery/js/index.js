@@ -49,7 +49,10 @@ var app=new Vue({
 		gamelist:[
 			{icon:'https://m8.3000ms.com/official/images/g-ssc.png',name:'重庆时时彩'},
 			{icon:'https://m8.3000ms.com/official/images/g-hkc.png',name:'六合彩'},
-			{icon:'https://m8.3000ms.com/official/images/g-bjsc.png',name:'北京赛车'}
+			{icon:'https://m8.3000ms.com/official/images/g-bjsc.png',name:'北京赛车'},
+			{icon:'https://m8.3000ms.com/official/images/g-xyft.png',name:'幸运飞艇'},
+			{icon:'https://m8.3000ms.com/official/images/g-jsssc.png',name:'极速时时彩'},
+			{icon:'https://m8.3000ms.com/official/images/g-jssc.png',name:'极速赛车'},
 		],
 	},
 	components: {
