@@ -199,7 +199,7 @@
 				</div>
 			</div>
 			<div class="rightlist">
-				<div class="list" v-for="item,index in rightlist" :key="index">
+				<div class="list" v-for="item,index in rightlist" :key="index" @click="jumplist(item)">
 					<div class="icon">
 						<i :class="'iconfont '+item.icon" :style="'background:'+item.color"></i>
 					</div>
@@ -231,14 +231,31 @@
 				</div>
 			</div>
 			<div class="footer">
-				<div class="btns" :style="'background:'+themecolor">
+				<div class="btns" :style="'background:'+themecolor" @click="betscancel">
 					取消
 				</div>
-				<div class="btns" :style="'background:'+themecolor">
+				<div class="btns" :style="'background:'+themecolor" @click="betsconfirm">
 					确定
 				</div>
 			</div>
 		</mu-dialog>
+		<div class="tips" v-if="showinfo==true">
+			<div class="text">{{tipmessage}}</div>
+		</div>
+		<div class="allgray" v-if="transfertip"></div>
+		<div class="transfertip" v-if="transfertip">
+			<div class="text">
+				彩票钱包余额不足,请转账!
+			</div>
+			<div class="btns">
+				<div class="btn" :style="'background:'+themecolor" @click="transfertip=false">
+					取消
+				</div>
+				<div class="btn" :style="'background:'+themecolor" @click="transfertip=false">
+					确定
+				</div>
+			</div>
+		</div>
 	</div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>

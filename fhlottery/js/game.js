@@ -1,6 +1,9 @@
 var app=new Vue({
 	el:'#Game',
 	data:{
+		transfertip:true,
+		tipmessage:'',
+		showinfo:false,
 		openSimple:false,
 		themecolor:"#ff9800",
 		night:false,
@@ -76,18 +79,47 @@ var app=new Vue({
 		],
 	},
 	mounted(){
-	 var night=localStorage.getItem('night')
-	 if(night){
-		 this.night=true;
-		 document.body.style.filter="invert(100%)";
-	 }else{
-		 this.night=false;
-		 document.body.style.filter="none";
-	 }
+		var night=localStorage.getItem('night')
+		if(night){
+			this.night=true;
+			document.body.style.filter="invert(100%)";
+		}else{
+			this.night=false;
+			document.body.style.filter="none";
+		}
 	},
 	methods:{
+		jumplist(item){
+			if(item.id==0){
+				window.location.href="prizeresult.html"
+			}
+		},
+		betscancel(){
+			this.openSimple=false;
+			this.tipmessage='取消下注'
+			this.showinfo=true;
+			setTimeout(()=>{
+				this.showinfo=false;
+			},2000)
+		},
+		betsconfirm(){
+			this.openSimple=false;
+			this.tipmessage='下注成功'
+			this.showinfo=true;
+			setTimeout(()=>{
+				this.showinfo=false;
+			},2000)
+		},
 		bets(){
-			this.openSimple=true;
+			if(this.num=''){
+				this.openSimple=true;
+			}else{
+				this.tipmessage='请输入投注金额'
+				this.showinfo=true
+				setTimeout(()=>{
+					this.showinfo=false;
+				},2000)
+			}
 		},
 		back(){
 			window.location.href="index.html"

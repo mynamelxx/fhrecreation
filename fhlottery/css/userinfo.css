@@ -1,0 +1,84 @@
+@CHARSET "UTF-8";
+html body{
+	margin:0px;
+}
+#UserInfo{
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	background: #eceff2;
+}
+#UserInfo .head{
+	height:55px;
+	background: #fff;
+	color:#444;
+	font-size:0px;
+	border-bottom: 1px solid #d2d5da;
+	background: #f8f8f8;
+}
+#UserInfo .head .icon{
+	display: inline-block;
+	line-height: 55px;
+	width:20%;
+	position: relative;
+	left:15px;
+}
+#UserInfo .head .icon i{
+	color:#ef6b73;
+	font-size:1.3rem;
+}
+#UserInfo .head .text{
+	width:60%;
+	text-align:center;
+	line-height: 55px;
+	display: inline-block;
+	font-size:1.25rem;
+	font-weight: 550;
+}
+#UserInfo .userinfos{
+	background: #fff;
+	border-bottom: 1px solid #d2d5da;
+	padding:5px 0;
+}
+#UserInfo .userinfos .info{
+	font-size:0.7rem;
+	padding:5px 8px;
+}
+#UserInfo .userinfos .info .key{
+	display: inline-block;
+}
+#UserInfo .userinfos .info .value{
+	display: inline-block;
+}
+#UserInfo .userinfos .info .value .game{
+	display: inline-block;
+	padding:0 3px;
+}
+#UserInfo .userinfos .info .value .game img{
+	position: relative;
+	top:3px;
+	right:3px;
+}
+#UserInfo .mypersoninfo{
+	margin-top:25px;
+	border-top:1px solid #d2d5da;
+	background: #fff;
+}
+#UserInfo .mypersoninfo .info{
+	border-bottom:1px solid #d2d5d5;
+	line-height:50px;
+	width:100%;
+	overflow: hidden;
+	font-size:0.8rem;
+}
+#UserInfo .mypersoninfo .info .key{
+	display: inline-block;
+	padding-left: 10px;
+}
+#UserInfo .mypersoninfo .info .value{
+	display: inline-block;
+	float:right;
+	padding-right:10px;
+}

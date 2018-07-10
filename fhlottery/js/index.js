@@ -65,6 +65,12 @@ var app=new Vue({
 				case '重庆时时彩': window.location.href="game.html";break;
 				case '北京赛车':window.location.href="game2.html";break;
 			}
+		},
+		marqueedetail(){
+			
+		},
+		seeuserinfo(){
+			window.location.href="user.html"
 		}
 	}
 })

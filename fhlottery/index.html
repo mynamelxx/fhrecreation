@@ -18,7 +18,7 @@
 				<div class="userbtn" @click="login">
 					登录
 				</div>
-				<div class="userbtn">
+				<div class="userbtn" @click="seeuserinfo">
 					{{username}}
 				</div>
 			</div>
@@ -30,7 +30,7 @@
 				</swiper-slide>
 				<div class="swiper-pagination" slot="pagination"></div>
 			</swiper>
-			<div class="marquee">
+			<div class="marquee" @click="marqueedetail">
 				<div class="icon">
 					<i class="iconfont icon-gonggaolan"></i>
 				</div>

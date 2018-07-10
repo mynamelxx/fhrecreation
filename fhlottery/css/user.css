@@ -1,0 +1,135 @@
+@CHARSET "UTF-8";
+html body{
+	margin:0px;
+}
+#User{
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	background: #eceff2;
+}
+#User .head{
+	height:55px;
+	background: #fff;
+	color:#444;
+	font-size:0px;
+	border-bottom: 1px solid #d2d5da;
+	background: #f8f8f8;
+}
+#User .head .icon{
+	display: inline-block;
+	line-height: 55px;
+	width:20%;
+	position: relative;
+	left:15px;
+}
+#User .head .icon i{
+	color:#ef6b73;
+	font-size:1.3rem;
+}
+#User .head .text{
+	width:60%;
+	text-align:center;
+	line-height: 55px;
+	display: inline-block;
+	font-size:1.25rem;
+	font-weight: 550;
+}
+#User .head .loginout{
+	width:20%;
+	display: inline-block;
+	line-height: 55px;
+	color:#ef6b73;
+	font-size:1rem;
+}
+#User .infos{
+	background:url('https://m8.3000ms.com/official/images/white/top-info-bg.jpg?v=ub12fce3b') no-repeat center center;
+	height: 110px;
+	font-size:0px;
+}
+#User .infos .pic{
+	display: inline-block;
+	width:30%;
+	padding:15px 0 15px 10%;
+}
+#User .infos .userinfo{
+	display: inline-block;
+	width:60%;
+	color:#fff;
+	vertical-align: top;
+	padding-top:5px;
+}
+#User .infos .userinfo .userhead{
+	font-size:1.1rem;
+}
+#User .infos .userinfo .user .info{
+	padding:0.5px 0;
+}
+#User .infos .userinfo .user .info .key{
+	display: inline-block;
+	font-size:0.7rem;
+}
+#User .infos .userinfo .user .info .value{
+	display: inline-block;
+	font-size:0.7rem;
+}
+#User .infos .userinfo .user .info .icon{
+	display: inline-block;
+	background: rgba(66,66,66,0.8);
+	border-radius: 50px;
+	padding:3px;
+}
+#User .infos .userinfo .user .info .value .game{
+	display: inline-block;
+	padding:0 3px;
+}
+#User .infos .userinfo .user .info .value .game img{
+	position: relative;
+	top:3px;
+	right:3px;
+}
+#User .menulist{
+	background: #fff;
+	font-size:0px;
+}
+#User .menulist .list{
+	width:50%;
+	display: inline-block;
+	line-height: 60px;
+	border-top: 1px solid #dee2e5;
+}
+#User .menulist .list .menu{
+	font-size:1rem;
+	padding-left:30px;
+	font-size:0.7rem;
+}
+#User .menulist .list .menu img{
+	position: relative;
+	top:5px;
+	right:5px;
+}
+.notice .title{
+	font-size:1.4rem;
+	text-align:center;
+	padding-top:24px;
+	padding-bottom: 15px;
+	border-bottom:0.5px solid #ccc;
+}
+.notice .message{
+	padding:0 24px;
+	margin:10px 0;
+	font-size:0.85rem;
+}
+.notice .btn{
+	margin-top:10px;
+	line-height:50px;
+	text-align: center;
+	font-size:1.3rem;
+	color:#66aaee;
+	background:#eee;
+}
+.notice .mu-dialog-body{
+	padding:0px;
+}

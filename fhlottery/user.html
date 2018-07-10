@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Strict//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link type="text/css" rel="styleSheet"  href="https://at.alicdn.com/t/font_471543_nl0dv4dv14d.css" />
+<link rel="stylesheet" href="https://unpkg.com/muse-ui/dist/muse-ui.css">
+<link type="text/css" rel="styleSheet"  href="css/user.css" />
+<title>凤凰娱乐</title>
+</head>
+<body>
+	<div id="User">
+		<div class="head">
+			<div class="icon" @click="back">
+				<i class="iconfont el-icon-lxx-40"></i>
+			</div>
+			<div class="text">
+				个人中心
+			</div>
+			<div class="loginout">
+				退出登录
+			</div>
+		</div>
+		<div class="infos">
+			<div class="pic">
+				<img :src="pic" width="68%">
+			</div>
+			<div class="userinfo">
+				<div class="userhead">
+					中午好!　{{user.name}}
+				</div>
+				<div class="user">
+					<div class="info">
+						<div class="key">我的钱包：</div>
+						<div class="value"><span style="color:#ffea39">{{user.money}}</span>RMB</div>
+						<div class="icon">
+							<i class="iconfont el-icon-lxx-shuaxin"></i>
+						</div>
+					</div>
+					<div class="info">
+						<div class="key">会员等级：</div>
+						<div class="value">{{user.viplevel}}</div>
+					</div>
+					<div class="info">
+						<div class="key">游戏等级：</div>
+						<div class="value">
+							<div class="game" v-for="item,index in user.gamelevel" :key="index">
+								<img :src="item.img" width="20px">{{item.level}}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="menulist">
+			<div class="list" v-for="item,index in menulist" :key="index">
+				<div class="menu" v-if="index%2==0" key="left" @click="seedetail(item)">
+					<img :src="item.img" width="25px">
+					{{item.text}}
+				</div>
+				<div class="menu" v-else key="right" style="border-left:1px solid #dee2e5" @click="seedetail(item)">
+					<img :src="item.img" width="25px">
+					{{item.text}}
+				</div>
+			</div>
+		</div>
+		<mu-dialog  width="90%" :open.sync="openSimple" class="notice">
+			<div class="title">
+				公告信息
+			</div>
+			<div class="message">
+				{{notice}}
+			</div>
+			<div class="btn" @click="openSimple=false">
+				我知道
+			</div>
+		</mu-dialog>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="https://unpkg.com/muse-ui/dist/muse-ui.js"></script>
+<script src="js/user.js"></script>
+<script>
+</script>
+</html>

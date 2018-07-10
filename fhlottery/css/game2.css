@@ -521,3 +521,61 @@
 	color:#fff;
 	display: inline-block;
 }
+#Game .tips{
+	position: absolute;
+	left:0;
+	top:0;
+	bottom:0;
+	right:0;
+	text-align:center;
+	color:#fff;
+	font-size:0.9375rem;
+}
+#Game .tips .text{
+	padding:20px;
+	background: rgba(0,0,0,.7);
+	border-radius: 6px;
+	display: inline-block;
+	vertical-align: baseline;
+	margin-top:80%;
+	text-overflow: ellipsis;
+}
+#Game .transfertip{
+	position: absolute;
+	width:80%;
+	top:40%;
+	background: #fff;
+	border:1px solid #eee;
+	left:10%;
+	border-radius:6px;
+	text-align:center;
+	z-index: 10001;
+	font-size:0px;
+}
+#Game .transfertip .btns{
+	padding-bottom: 15px;
+}
+#Game .transfertip .btns .btn{
+	display: inline-block;
+	color:#fff;
+	width:45%;
+	line-height: 35px;
+	font-size:1.1rem;
+	border-radius: 3px;
+	margin:0px 2%;
+}
+#Game .transfertip .text{
+	line-height: 80px;
+	font-size:1.2rem;
+	font-weight: 550;
+	letter-spacing:1px;
+}
+#Game .allgray{
+	position: absolute;
+	left:0px;
+	top:0px;
+	bottom:0px;
+	right:0px;
+	z-index:1000;
+	background: rgba(222,222,222,0.6);
+}

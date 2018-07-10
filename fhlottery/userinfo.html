@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Strict//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link type="text/css" rel="styleSheet"  href="https://at.alicdn.com/t/font_471543_5zg9rg2sorm.css" />
+<link type="text/css" rel="styleSheet"  href="css/userinfo.css" />
+<title>凤凰娱乐</title>
+</head>
+<body>
+	<div id="UserInfo">
+		<div class="head">
+			<div class="icon" @click="back">
+				<i class="iconfont el-icon-lxx-40"></i>
+			</div>
+			<div class="text">
+				个人资料
+			</div>
+		</div>
+		<div class="userinfos">
+			<div class="info">
+				<div class="key">国别：</div>
+				<div class="value">{{userinfo.nationality}}</div>
+			</div>
+			<div class="info">
+				<div class="key">币别：</div>
+				<div class="value">{{userinfo.currency}}</div>
+			</div>
+			<div class="info">
+				<div class="key">会员等级：</div>
+				<div class="value">{{userinfo.viplevel}}</div>
+			</div>
+			<div class="info">
+				<div class="key">游戏等级：</div>
+				<div class="value">
+					<div class="game" v-for="item,index in userinfo.gamelevel" :key="index">
+						<img :src="item.img" width="20px">{{item.level}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="mypersoninfo">
+			<div class="info">
+				<div class="key">帐号：</div>
+				<div class="value">{{userinfo.user}}</div>
+			</div>
+			<div class="info">
+				<div class="key">生日：</div>
+				<div class="value" v-if="userinfo.birthday">{{userinfo.birthday}}</div>
+				<div class="value" v-else><a href="#">填写生日获赠礼金</a></div>
+			</div>
+			<div class="info">
+				<div class="key">真实姓名：</div>
+				<div class="value" v-if="userinfo.name">{{userinfo.name}}</div>
+				<div class="value" v-else><a href="#">添加</a></div>
+			</div>
+			<div class="info">
+				<div class="key">昵称：</div>
+				<div class="value">
+					{{userinfo.nickname}}
+					<i class="iconfont el-icon-lxx-xiugai" style="color:#d2d5da"></i>
+				</div>
+			</div>
+			<div class="info">
+				<div class="key">手机号码：</div>
+				<div class="value" v-if="userinfo.phone">{{userinfo.phone}}</div>
+				<div class="value" v-else><a href="#">添加</a></div>
+			</div>
+			<div class="info">
+				<div class="key">邮箱：</div>
+				<div class="value">{{userinfo.email}}</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="js/userinfo.js"></script>
+<script>
+</script>
+</html>

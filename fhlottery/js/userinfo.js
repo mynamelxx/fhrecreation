@@ -1,0 +1,27 @@
+var app=new Vue({
+  el:'#UserInfo',
+	data:{
+		userinfo:{
+			nationality:'中国',
+			currency:'RMB',
+			viplevel:'普通会员',
+			gamelevel:[
+				{img:'https://m8.3000ms.com/official/images/g-sgj.png',level:0},
+				{img:'https://m8.3000ms.com/official/images/g-egame.png',level:0},
+				{img:'https://m8.3000ms.com/official/images/g-maya.png',level:0},
+				{img:'https://m8.3000ms.com/official/images/g-ag.png',level:0},
+			],
+			user:'111',
+			birthday:'',
+			name:'',
+			nickname:'111',
+			phone:'',
+			email:'11111@qq.com',
+		},
+	},
+	methods:{
+		back(){
+			window.location.href="user.html"
+		}
+	}
+})
