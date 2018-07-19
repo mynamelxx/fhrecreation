@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Strict//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link type="text/css" rel="styleSheet"  href="https://at.alicdn.com/t/font_471543_o906t2xysvi.css"/>
+<link rel="stylesheet" href="https://unpkg.com/muse-ui/dist/muse-ui.css">
+<link type="text/css" rel="styleSheet"  href="css/payment.css"/>
+<title>凤凰娱乐</title>
+</head>
+<body>
+	<div id="Payment">
+		<div class="head">
+			<div class="icon" @click="back">
+				<i class="iconfont el-icon-lxx-40"></i>
+			</div>
+			<div class="text">
+				在线支付
+			</div>
+		</div>
+		<div class="main">
+			<input v-model="money" class="money" placeholder="存款金额">
+			<span class="tip">单笔下限<span class="num">100</span>,单笔上限<span class="num">20000</span></span>
+			<mu-select :value="bank" full-width class="bank" @change="changebank" solo>
+				<mu-option label="请选择支付银行" :value="0"></mu-option>
+				<mu-option label="abc" :value="1"></mu-option>
+				<mu-option label="dsa" :value="2"></mu-option>
+			</mu-select>
+			<div class="btn">
+				开始充值
+			</div>
+		</div>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="https://unpkg.com/muse-ui/dist/muse-ui.js"></script>
+<script src="js/payment.js"></script>
+<script>
+</script>
+</html>

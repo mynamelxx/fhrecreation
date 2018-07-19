@@ -1,0 +1,25 @@
+var app=new Vue({
+  el:'#AddBank',
+	data:{
+		bank:0,
+		province:0,
+		city:0,
+		network:'',
+		user:'',
+		username:'兰*'
+	},
+	methods:{
+		back(){
+			window.location.href="deposit.html"
+		},
+		changebank(e){
+			this.bank=e
+		},
+		changeprovince(e){
+			this.province=e
+		},
+		changecity(e){
+			this.city=e
+		}
+	}
+})

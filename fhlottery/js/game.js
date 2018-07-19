@@ -89,6 +89,9 @@ var app=new Vue({
 		}
 	},
 	methods:{
+		instantnote(){
+			window.location.href="Instantnote.html"
+		},
 		jumplist(item){
 			if(item.id==0){
 				window.location.href="prizeresult.html"

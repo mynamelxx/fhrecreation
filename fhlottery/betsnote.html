@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Strict//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link type="text/css" rel="styleSheet"  href="https://at.alicdn.com/t/font_471543_o906t2xysvi.css"/>
+<link rel="stylesheet" href="https://unpkg.com/muse-ui/dist/muse-ui.css">
+<link type="text/css" rel="styleSheet"  href="css/betsnote.css"/>
+<title>凤凰娱乐</title>
+</head>
+<body>
+	<div id="BetsNote">
+		<div class="head" :style="'background:'+themecolor">
+			<div class="icon" @click="back">
+				<i class="iconfont el-icon-lxx-40"></i>
+			</div>
+			<div class="text">
+				即时注单
+			</div>
+		</div>
+		<div class="path" :style="'color:'+themecolor">
+			六合彩 > 下注明细
+		</div>
+		<div class="title">
+			<div class="text">
+				期号
+			</div>
+			<div class="text">
+				下注明细
+			</div>
+			<div class="text">
+				下注金额
+			</div>
+			<div class="text">
+				可赢金额
+			</div>
+		</div>
+		<div class="list">
+			<div class="betsnotelist" v-for="item,index in list" :key="index">
+				<div class="singer" v-if="index %2 ==0" key="singer">
+					<div class="text">
+						{{item.number}}
+					</div>
+					<div class="text">
+						{{item.detail}}
+					</div>
+					<div class="text">
+						{{item.money}}
+					</div>
+					<div class="text">
+						{{item.winmoney}}
+					</div>
+				</div>
+				<div class="dual" v-else key="dual">
+					<div class="text">
+						{{item.number}}
+					</div>
+					<div class="text">
+						{{item.detail}}
+					</div>
+					<div class="text">
+						{{item.money}}
+					</div>
+					<div class="text">
+						{{item.winmoney}}
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<span class="text">总下注金额：<span class="num">{{allnum}}</span></span>
+		</div>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="https://unpkg.com/muse-ui/dist/muse-ui.js"></script>
+<script src="js/betsnote.js"></script>
+<script>
+</script>
+</html>

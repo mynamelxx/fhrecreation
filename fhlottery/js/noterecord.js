@@ -1,0 +1,23 @@
+var app=new Vue({
+  el:'#NoteRecord',
+	data:{
+		note:{
+			allnum:0,
+			allwinlose:"0.00",
+			notelist:[
+				{time:'2018-07-15',week:'星期天',num:0,winlose:"0.00"},
+				{time:'2018-07-14',week:'星期六',num:0,winlose:"0.00"},
+				{time:'2018-07-13',week:'星期五',num:0,winlose:"0.00"},
+				{time:'2018-07-12',week:'星期四',num:0,winlose:"0.00"},
+				{time:'2018-07-11',week:'星期三',num:0,winlose:"0.00"},
+				{time:'2018-07-10',week:'星期二',num:0,winlose:"0.00"},
+				{time:'2018-07-09',week:'星期一',num:0,winlose:"0.00"},
+			]
+		},
+	},
+	methods:{
+		back(){
+			window.location.href="deposit.html"
+		},
+	}
+})

@@ -1,0 +1,131 @@
+@CHARSET "UTF-8";
+html body{
+	margin:0px;
+}
+#NoteRecord{
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	background: #eceff2;
+}
+#NoteRecord .head{
+	height:55px;
+	background: #fff;
+	color:#444;
+	font-size:0px;
+	border-bottom: 1px solid #d2d5da;
+	background: #f8f8f8;
+}
+#NoteRecord .head .icon{
+	display: inline-block;
+	line-height: 55px;
+	width:20%;
+	position: relative;
+	left:15px;
+}
+#NoteRecord .head .icon i{
+	color:#ef6b73;
+	font-size:1.3rem;
+}
+#NoteRecord .head .text{
+	width:60%;
+	text-align:center;
+	line-height: 55px;
+	display: inline-block;
+	font-size:1.25rem;
+	font-weight: 550;
+}
+#NoteRecord .main .title{
+	border:.5px solid #ccc;
+	font-size:0px;
+	height:30px;
+	text-align: center;
+	background: #fff;
+}
+#NoteRecord .main .title .left{
+	border-right:.5px solid #ccc;
+	display: inline-block;
+	font-size:14px;
+	width:33.3%;
+	line-height: 30px;
+}
+#NoteRecord .main .title .center{
+	display: inline-block;
+	font-size:14px;
+	width:33.3%;
+	line-height: 30px;
+}
+#NoteRecord .main .title .right{
+	display: inline-block;
+	font-size:14px;
+	width:33.3%;
+	line-height: 30px;
+}
+#NoteRecord .main .notelist{
+	border:.5px solid #ccc;
+	font-size:0px;
+	text-align: center;
+	border-top:0px;
+	background: #fff;
+	margin-bottom: 45px;
+}
+#NoteRecord .main .notelist .left{
+	border-right:.5px solid #ccc;
+	display: inline-block;
+	font-size:14px;
+	width:33.3%;
+	padding:8px 0;
+}
+#NoteRecord .main .notelist .center{
+	display: inline-block;
+	font-size:14px;
+	width:33.3%;
+	line-height: 45px;
+	vertical-align: top;
+}
+#NoteRecord .main .notelist .right{
+	display: inline-block;
+	font-size:14px;
+	width:33.3%;
+	line-height:45px;
+	vertical-align: top;
+}
+#NoteRecord .sumnum{
+	position: fixed;
+	z-index: 11;
+	background: #fff;
+	height: 45px;
+	font-size:0px;
+	width:100%;
+	bottom:0px;
+	text-align:center;
+}
+#NoteRecord .sumnum .text{
+	display: inline-block;
+	width:33.3%;
+	font-size:18px;
+	line-height: 45px;
+	color:#666;
+}
+#NoteRecord .sumnum .num{
+	display: inline-block;
+	width:33.3%;
+	font-size:16px;
+	font-weight: 550;
+	color:#666;
+	line-height: 45px;
+}
+#NoteRecord .sumnum .winlose{
+	display: inline-block;
+	width:33.3%;
+	font-size:16px;
+	color:#fff;
+}
+#NoteRecord .sumnum .winlose .winlosetext{
+	display: inline-block;
+	padding:2px 3px;
+	background: #666;
+	border-radius: 6px;
+}

@@ -1,0 +1,84 @@
+@CHARSET "UTF-8";
+html body{
+	margin:0px;
+}
+#Instantnote{
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	background: #eceff2;
+}
+#Instantnote .head{
+	height:40px;
+	color:#444;
+	font-size:0px;
+	border-bottom: 1px solid #d2d5da;
+	background: #f8f8f8;
+}
+#Instantnote .head .icon{
+	display: inline-block;
+	line-height: 40px;
+	width:20%;
+	position: relative;
+	left:15px;
+}
+#Instantnote .head .icon i{
+	color:#fff;
+	font-size:1.3rem;
+}
+#Instantnote .head .text{
+	width:60%;
+	text-align:center;
+	line-height:40px;
+	display: inline-block;
+	font-size:1.25rem;
+	color:#fff;
+}
+#Instantnote .title{
+	font-size:0px;
+	height:45px;
+	border-bottom:1px solid #ccc;
+}
+#Instantnote .title .text{
+	display: inline-block;
+	font-size:14px;
+	width:33.3%;
+	text-align:center;
+	line-height:45px;
+}
+#Instantnote .main{
+	margin-top:12px;
+	border-top:1px solid #ccc;
+}
+#Instantnote .main .list{
+	font-size:0px;
+}
+#Instantnote .main .list .Singular{
+	background: #fff;
+	padding:15px 8px;
+}
+#Instantnote .main .list .dual{
+	padding: 15px 8px;
+}
+#Instantnote .main .list .name{
+	display: inline-block;
+	width:33.3%;
+	font-size:12px;
+}
+#Instantnote .main .list .num{
+	display: inline-block;
+	width:33.3%;
+	font-size:12px;
+	text-align: center;
+}
+#Instantnote .main .list .num a{
+	text-decoration:underline;
+}
+#Instantnote .main .list .money{
+	display: inline-block;
+	width:33.3%;
+	font-size:12px;
+	text-align: center;
+}

@@ -1,0 +1,106 @@
+@CHARSET "UTF-8";
+html body{
+	margin:0px;
+}
+#PrizeResult .head{
+	height:45px;
+	color:#fff;
+}
+#PrizeResult .head .icon{
+	display: inline-block;
+	line-height:45px;
+	width:20%;
+	position: relative;
+	left:15px;
+}
+#PrizeResult .head .icon i{
+	font-size:1.3rem;
+}
+#PrizeResult .head .text{
+	width:60%;
+	text-align:center;
+	line-height:45px;
+	display: inline-block;
+	font-size:1.25rem;
+}
+#PrizeResult .bottomsheet{
+	font-size:0px;
+}
+#PrizeResult .bottomsheet .sheet{
+	display: inline-block;
+	width:50%;
+	overflow: hidden;
+	padding:10px;
+}
+#PrizeResult .bottomsheet .sheet .text{
+	font-size:1rem;
+	display: inline-block;
+}
+#PrizeResult .bottomsheet .sheet .icon{
+	display: inline-block;
+	float:right;
+}
+#PrizeResult .bottomsheet .sheet .icon i{
+	color:#d2d5da;
+	font-size:0.8rem;
+}
+#PrizeResult .resultlist .resulthead{
+	font-size:0px;
+	line-height: 30px;
+	text-align: center;
+	padding:0 4%;
+	color:#757575;
+	border-bottom: 1px solid #f1f1f1;
+}
+#PrizeResult .resultlist .resulthead .key{
+	display: inline-block;
+	width:25%;
+	font-size:1rem;
+	border-right: 1px solid #f1f1f1;
+}
+#PrizeResult .resultlist .resulthead .value{
+	display: inline-block;
+	width:75%;
+	font-size:1rem;
+}
+#PrizeResult .resultlist .list{
+	font-size:0px;
+	line-height: 30px;
+	text-align: center;
+	padding:0 4%;
+	color:#757575;
+	border-bottom: 1px solid #f1f1f1;
+	line-height:25px;
+}
+#PrizeResult .resultlist .list .key{
+	display: inline-block;
+	width:25%;
+	font-size:0.8rem;
+	border-right: 1px solid #f1f1f1;
+	line-height: 20px;
+}
+#PrizeResult .resultlist .list .value{
+	display: inline-block;
+	width:75%;
+	font-size:1rem;
+	text-align: left;
+}
+#PrizeResult .resultlist .list .value .uplist .up{
+	display: inline-block;
+	width:24px;
+	height:24px;
+	border-radius: 4px;
+	text-align:center;
+	font-size:0.9rem;
+	margin:2px 1px 0;
+	color:#fff;
+}
+#PrizeResult .resultlist .list .value .downlist .down{
+	display: inline-block;
+	width:27px;
+	height:25px;
+	border-radius:4px;
+	text-align:center;
+	font-size:0.9rem;
+	margin:2px 1px 0;
+}

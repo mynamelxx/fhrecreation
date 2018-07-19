@@ -1,0 +1,78 @@
+	<!DOCTYPE html PUBLIC '-//W3C//DTD HTML 4.01 Strict//EN' 'http://www.w3.org/TR/html4/strict.dtd'>
+<html>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=UTF-8'>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link type="text/css" rel="styleSheet"  href="https://at.alicdn.com/t/font_471543_7ly4lmrjs4y.css" />
+<link rel="stylesheet" href="https://unpkg.com/muse-ui/dist/muse-ui.css">
+<link type="text/css" rel="styleSheet"  href="css/prizeresult2.css" />
+<title>凤凰娱乐</title>
+</head>
+<body>
+	<div id="PrizeResult">
+		<div class="head" :style="'background:'+themecolor">
+			<div class="icon" @click="back">
+				<i class="iconfont el-icon-lxx-40"></i>
+			</div>
+			<div class="text">
+				开奖结果
+			</div>
+		</div>
+		<div class="bottomsheet">
+			<div class="sheet" style="border-right: 1px solid #eee" @click="opentype=true">
+				<div class="text" :style="'color:'+themecolor">{{type}}</div>
+				<div class="icon"><i class="iconfont el-icon-lxx-xia-copy"></i></div>
+			</div>
+			<div class="sheet" @click="opentime=true">
+				<div class="text" :style="'color:'+themecolor">{{time}}</div>
+				<div class="icon"><i class="iconfont el-icon-lxx-xia-copy"></i></div>
+			</div>
+		</div>
+		<div class="resultlist">
+			<div class="resulthead">
+				<div class="key">期数</div>
+				<div class="value">开奖号码</div>
+			</div>
+			<div class="list" v-for="item,index in resultlist" :key="index">
+				<div class="key">
+					<div class="periods">
+						{{item.periods}}
+					</div>
+					<div class="time">
+						{{item.time}}
+					</div>
+				</div>
+				<div class="value">
+					<div class="uplist">
+						<div class="up" v-for="it,ind in item.up" :style="'background:'+themecolor+';'+'background:#'+Math.floor(Math.random()*900000 + 100000).toString(10)">
+							{{it}}
+						</div>
+					</div>
+					<div class="downlist">
+						<div class="down" v-for="it,inde in item.down" :style="'border: 1px solid '+themecolor">
+							{{it}}
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<mu-bottom-sheet :open.sync="opentype">
+			<mu-list @item-click="changetype($event)">
+				<mu-list-item button v-for="item,index in typelist" :key="index" :value="item">
+					<mu-list-item-title>{{item}}</mu-list-item-title>
+				</mu-list-item>
+			</mu-list>
+		</mu-bottom-sheet>
+		<mu-bottom-sheet :open.sync="opentime">
+			<mu-list @item-click="changetime($event)">
+				<mu-list-item button v-for="item,index in timelist" :key="index" :value="item">
+					<mu-list-item-title>{{item}}</mu-list-item-title>
+				</mu-list-item>
+			</mu-list>
+		</mu-bottom-sheet>
+	</div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+<script src="https://unpkg.com/muse-ui/dist/muse-ui.js"></script>
+<script src="js/prizeresult2.js"></script>
+</html>

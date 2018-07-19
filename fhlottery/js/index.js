@@ -18,6 +18,13 @@ var app=new Vue({
 				clickable: true
 			},
 		},
+		footerbarlist:[
+			{icon:'https://m8.3000ms.com/official/images/icon-coin.png',name:'资金管理',link:'deposit.html'},
+			{icon:'https://m8.3000ms.com/official/images/icon-record.png',name:'投注记录',link:'noterecord.html'},
+			{icon:'https://m8.3000ms.com/official/images/icon-service.png',name:'客服',link:'#'},
+			{icon:'https://m8.3000ms.com/official/images/icon-transfer.png',name:'转账',link:'#'},
+			{icon:'https://m8.3000ms.com/official/images/icon-gift.png',name:'优惠活动',link:'#'},
+		],
 		marqueelist:[
 			'重要通告：VIP入款【浦发银行庞高3373】【工商银行马金山1106】已停用；公司会不定期对银行账号进行更换，请您每次入款前务必登录您的会员账号在我们网站获取最新的入款账号，先提交订单再存款，如转入停用账户造成的资金损失本公司概不负责，如有任何疑问请联系我们24小时在线客服。',
 			'凤凰娱乐，新增微信，支付宝扫码入款渠道，每天早上9点至凌晨2点会员只需联系在线客服提供微信或支付宝二维码进行支付，提供支付成功截图至客服，返回＜线上存款＞点击＜银行转账＞选择对应的入款方式和金额提交即可快速到账！',

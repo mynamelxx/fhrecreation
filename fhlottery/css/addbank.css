@@ -1,0 +1,71 @@
+@CHARSET "UTF-8";
+html body{
+	margin:0px;
+}
+#AddBank{
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	background: #eceff2;
+}
+#AddBank .head{
+	height:55px;
+	background: #fff;
+	color:#444;
+	font-size:0px;
+	border-bottom: 1px solid #d2d5da;
+	background: #f8f8f8;
+}
+#AddBank .head .icon{
+	display: inline-block;
+	line-height: 55px;
+	width:20%;
+	position: relative;
+	left:15px;
+}
+#AddBank .head .icon i{
+	color:#ef6b73;
+	font-size:1.3rem;
+}
+#AddBank .head .text{
+	width:60%;
+	text-align:center;
+	line-height: 55px;
+	display: inline-block;
+	font-size:1.25rem;
+	font-weight: 550;
+}
+#AddBank .main{
+	margin-top:18px;
+}
+#AddBank .main .list{
+	padding-left:8px;
+	background: #fff;
+	border-bottom: 1px solid #eee;
+}
+#AddBank .main .inputbox{
+	width:100%;
+	outline: none;
+	border:0px;
+	border-bottom: 1px solid #eee;
+	height:45px;
+	padding-left:8px;
+}
+#AddBank .main .footer{
+	padding:0 8px;
+}
+#AddBank .main .footer .tip{
+	margin:8px 0;
+	font-size:12px;
+}
+#AddBank .main .footer .btn{
+	margin-top:8px;
+	background: #409eff;
+	color:#eee;
+	text-align:center;
+	padding:8px 0;
+	border-radius:4px;
+	font-size:18px;
+}

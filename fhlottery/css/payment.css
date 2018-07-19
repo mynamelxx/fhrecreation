@@ -1,0 +1,77 @@
+@CHARSET "UTF-8";
+html body{
+	margin:0px;
+}
+#Payment{
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	background: #eceff2;
+}
+#Payment .head{
+	height:55px;
+	background: #fff;
+	color:#444;
+	font-size:0px;
+	border-bottom: 1px solid #d2d5da;
+	background: #f8f8f8;
+}
+#Payment .head .icon{
+	display: inline-block;
+	line-height: 55px;
+	width:20%;
+	position: relative;
+	left:15px;
+}
+#Payment .head .icon i{
+	color:#ef6b73;
+	font-size:1.3rem;
+}
+#Payment .head .text{
+	width:60%;
+	text-align:center;
+	line-height: 55px;
+	display: inline-block;
+	font-size:1.25rem;
+	font-weight: 550;
+}
+#Payment .main{
+	padding:8px;
+}
+#Payment .main .money{
+	width:100%;
+	outline: none;
+	height:45px;
+	border:1px solid #aaa;
+	padding:0 8px;
+}
+#Payment .main .tip{
+	color:#aaa;
+	font-size:12px;
+}
+#Payment .main .tip .num{
+	color:#ff4081;
+}
+#Payment .main .bank{
+	width:100%;
+	height:45px;
+	background: #fff;
+}
+#Payment .main .bank .mu-select{
+	padding-left:8px;
+	border:0px;
+}
+#Payment .main .bank .mu-select .mu-select-content{
+	border:0px;
+}
+#Payment .main .btn{
+	margin-top:8px;
+	background: #409eff;
+	color:#eee;
+	text-align:center;
+	padding:8px 0;
+	border-radius:4px;
+	font-size:18px;
+}

@@ -1,0 +1,96 @@
+@CHARSET "UTF-8";
+html body{
+	margin:0px;
+}
+#BetsNote{
+	position: absolute;
+	top:0px;
+	bottom:0px;
+	left:0px;
+	right:0px;
+	background: #eceff2;
+}
+#BetsNote .head{
+	height:40px;
+	color:#444;
+	font-size:0px;
+	border-bottom: 1px solid #d2d5da;
+	background: #f8f8f8;
+}
+#BetsNote .head .icon{
+	display: inline-block;
+	line-height: 40px;
+	width:20%;
+	position: relative;
+	left:15px;
+}
+#BetsNote .head .icon i{
+	color:#fff;
+	font-size:1.3rem;
+}
+#BetsNote .head .text{
+	width:60%;
+	text-align:center;
+	line-height:40px;
+	display: inline-block;
+	font-size:1.25rem;
+	color:#fff;
+}
+#BetsNote .path{
+	padding:8px 0 8px 8px;
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+}
+#BetsNote .title{
+	font-size:0px;
+	padding:12px 0;
+	border-bottom:1px solid #ddd;
+}
+#BetsNote .title .text{
+	display: inline-block;
+	width:25%;
+	font-size:14px;
+	text-align:center;
+}
+#BetsNote .list{
+	font-size:0px;
+}
+#BetsNote .list .betsnotelist{
+	border-bottom: 1px solid #ddd;
+}
+#BetsNote .list .betsnotelist .singer{
+	background: #fff;
+	height:55px;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
+#BetsNote .list .betsnotelist .dual{
+	height:55px;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+}
+#BetsNote .list .betsnotelist .text{
+	font-size:14px;
+	display: inline-block;
+	width:25%;
+	text-align:center;
+}
+#BetsNote .footer{
+	position: fixed;
+	bottom:0px;
+	width:100%;
+	background: #444;
+	height:45px;
+	line-height: 45px;
+	overflow: hidden;
+}
+#BetsNote .footer .text{
+	float:right;
+	color:#eee;
+	padding-right:15px;
+}
+#BetsNote .footer .num{
+	color:#3f3;
+}

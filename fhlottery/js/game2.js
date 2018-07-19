@@ -91,7 +91,7 @@ var app=new Vue({
   methods:{
   	jumplist(item){
 			if(item.id==0){
-				window.location.href="prizeresult.html"
+				window.location.href="prizeresult2.html"
 			}
 		},
   	betscancel(){
